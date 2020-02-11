@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TheMovieDatabase_Example' do
+  pod 'TheMovieDatabase', :path => '../'
+
+  target 'TheMovieDatabase_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

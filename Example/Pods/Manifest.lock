@@ -1,0 +1,16 @@
+PODS:
+  - TheMovieDatabase (0.1.0)
+
+DEPENDENCIES:
+  - TheMovieDatabase (from `../`)
+
+EXTERNAL SOURCES:
+  TheMovieDatabase:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TheMovieDatabase: f6426f63cbf63f480cab014a6121c3fbbf2dc6c7
+
+PODFILE CHECKSUM: 7016d5f7fc7f20cabcc514a1acceb673a5e12021
+
+COCOAPODS: 1.7.5

@@ -1,0 +1,22 @@
+{
+  "name": "TheMovieDatabase",
+  "version": "0.1.0",
+  "summary": "A short description of TheMovieDatabase.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Ruben Santiago/TheMovieDatabase",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ruben Santiago": "ruben.santiago@aa.com"
+  },
+  "source": {
+    "git": "https://github.com/Ruben Santiago/TheMovieDatabase.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TheMovieDatabase/Classes/**/*"
+}
