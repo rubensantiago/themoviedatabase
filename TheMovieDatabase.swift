@@ -32,7 +32,8 @@ public class TheMovieDatabase {
 
 // MARK - Images
 public extension TheMovieDatabase {
-    func downloadImage(atPath path: String,
+    
+    func getImage(atPath path: String,
                        size: CGSize,
                        quality: ImageQuality,
                        completion: ()->()) {

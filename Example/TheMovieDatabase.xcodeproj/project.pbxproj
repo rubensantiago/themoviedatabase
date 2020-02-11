@@ -33,7 +33,7 @@
 		2B89214701FC29D906BC2FBF /* Pods_TheMovieDatabase_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovieDatabase_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EC9C9DC2B6F1FEC6AB1EC53 /* TheMovieDatabase.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TheMovieDatabase.podspec; path = ../TheMovieDatabase.podspec; sourceTree = "<group>"; };
 		308C3000A7FD33DDC71E8650 /* Pods-TheMovieDatabase_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDatabase_Example.release.xcconfig"; path = "Target Support Files/Pods-TheMovieDatabase_Example/Pods-TheMovieDatabase_Example.release.xcconfig"; sourceTree = "<group>"; };
-		453D19C223F335B00062F213 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Movie.swift; path = TheMovieDatabase/Movie.swift; sourceTree = "<group>"; };
+		453D19C223F335B00062F213 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		50DFA1D6B2B9CBB0CF8FB5D1 /* Pods-TheMovieDatabase_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDatabase_Example.debug.xcconfig"; path = "Target Support Files/Pods-TheMovieDatabase_Example/Pods-TheMovieDatabase_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5A72408AA9623436E4195A2D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TheMovieDatabase_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieDatabase_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +94,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				453D19C223F335B00062F213 /* Movie.swift */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for TheMovieDatabase */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -116,6 +115,7 @@
 		607FACD21AFB9204008FA782 /* Example for TheMovieDatabase */ = {
 			isa = PBXGroup;
 			children = (
+				453D19C223F335B00062F213 /* Movie.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
