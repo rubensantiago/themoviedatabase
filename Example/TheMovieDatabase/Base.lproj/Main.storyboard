@@ -72,7 +72,7 @@
                             <outlet property="delegate" destination="Ty3-JM-ebM" id="NeV-Fb-ffs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="The Movie Database" id="NKX-gg-oSy"/>
+                    <navigationItem key="navigationItem" title="MovieDB" id="NKX-gg-oSy"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96A-r5-6CT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
