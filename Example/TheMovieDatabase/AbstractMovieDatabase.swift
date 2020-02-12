@@ -12,7 +12,8 @@ import TheMovieDatabase
 
 protocol AbstractMovieDatabase {
 	
-	typealias MovieSearchResultsCompletionHandler = ([AnyHashable : MovieSearchResultItem]) -> Void
+	typealias MovieSearchResultsCompletionHandler = ([MovieSearchResultItem]) -> Void
+	
 	typealias ImageDownloadCompletionHandler = (UIImage?) -> Void
 	
 	func searchFor(movieNamed searchQuery: String,

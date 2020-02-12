@@ -36,7 +36,7 @@ extension URLSession {
 	}
 }
 
-// MARK: - Helper functions for creating encoders and decoders
+// MARK: - Helper Functions for Creating JSON Decoder
 extension URLSession {
 
     func newJSONDecoder() -> JSONDecoder {
@@ -45,13 +45,5 @@ extension URLSession {
             decoder.dateDecodingStrategy = .iso8601
         }
         return decoder
-    }
-
-    func newJSONEncoder() -> JSONEncoder {
-        let encoder = JSONEncoder()
-        if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
-            encoder.dateEncodingStrategy = .iso8601
-        }
-        return encoder
     }
 }

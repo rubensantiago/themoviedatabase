@@ -1,0 +1,29 @@
+min_acl: private
+title: TheMovieDatabase
+module: TheMovieDatabase
+module_version: 0.1.0
+readme: README.md
+author: Ruben Santiago
+github_url: https://github.com/rubensantiago/themoviedatabase
+documentation: "docs/Guides/*.md"
+source_directory: TheMovieDatabase
+output: docs
+build_tool_arguments:
+    - -workspace
+    - ../Example/TheMovieDatabase.xcworkspace
+    - -scheme
+    - Movies
+    - -sdk
+    - iphonesimulator
+theme: apple
+head: "<style>
+header {
+	background-color: #c6332c;
+}
+header p {
+	color: #b9b9b9;
+}
+.sidebar {
+	width: 249px;
+}
+</style>"

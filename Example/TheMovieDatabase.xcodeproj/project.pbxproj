@@ -11,7 +11,11 @@
 		45A2FA7823F3A26C00F78546 /* TheMovieDatabaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FA7723F3A26C00F78546 /* TheMovieDatabaseAdapter.swift */; };
 		45A2FA7A23F3A4A700F78546 /* IMDBAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FA7923F3A4A700F78546 /* IMDBAdapter.swift */; };
 		45A2FA7D23F3A77600F78546 /* AbstractMovieDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FA7C23F3A77600F78546 /* AbstractMovieDatabase.swift */; };
-		45A2FA8523F3B3C200F78546 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2FA8423F3B3C200F78546 /* ViewController.swift */; };
+		45C8D24223F45153001A3D11 /* MovieSummaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C8D24123F45153001A3D11 /* MovieSummaryTableViewCell.xib */; };
+		45C8D24423F451FC001A3D11 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8D24323F451FC001A3D11 /* MainTableViewController.swift */; };
+		45C8D24623F45382001A3D11 /* EmptyStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C8D24523F45382001A3D11 /* EmptyStateTableViewCell.xib */; };
+		45C8D24823F46247001A3D11 /* CellReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8D24723F46247001A3D11 /* CellReuseIdentifier.swift */; };
+		45C8D24A23F4625A001A3D11 /* CellNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8D24923F4625A001A3D11 /* CellNib.swift */; };
 		45DD0AE923F35A59004FC056 /* MovieSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD0AE823F35A59004FC056 /* MovieSummaryTableViewCell.swift */; };
 		45DD0AEB23F362CD004FC056 /* MovieSearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DD0AEA23F362CD004FC056 /* MovieSearchResultsTableViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -42,7 +46,11 @@
 		45A2FA7723F3A26C00F78546 /* TheMovieDatabaseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDatabaseAdapter.swift; sourceTree = "<group>"; };
 		45A2FA7923F3A4A700F78546 /* IMDBAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMDBAdapter.swift; sourceTree = "<group>"; };
 		45A2FA7C23F3A77600F78546 /* AbstractMovieDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractMovieDatabase.swift; sourceTree = "<group>"; };
-		45A2FA8423F3B3C200F78546 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		45C8D24123F45153001A3D11 /* MovieSummaryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieSummaryTableViewCell.xib; sourceTree = "<group>"; };
+		45C8D24323F451FC001A3D11 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		45C8D24523F45382001A3D11 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
+		45C8D24723F46247001A3D11 /* CellReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReuseIdentifier.swift; sourceTree = "<group>"; };
+		45C8D24923F4625A001A3D11 /* CellNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNib.swift; sourceTree = "<group>"; };
 		45DD0AE823F35A59004FC056 /* MovieSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		45DD0AEA23F362CD004FC056 /* MovieSearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchResultsTableViewController.swift; sourceTree = "<group>"; };
 		50DFA1D6B2B9CBB0CF8FB5D1 /* Pods-TheMovieDatabase_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDatabase_Example.debug.xcconfig"; path = "Target Support Files/Pods-TheMovieDatabase_Example/Pods-TheMovieDatabase_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 		45A2FA7423F396D600F78546 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				45C8D24723F46247001A3D11 /* CellReuseIdentifier.swift */,
+				45C8D24923F4625A001A3D11 /* CellNib.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				45A2FA8123F3A92700F78546 /* Cells */,
@@ -132,6 +142,8 @@
 		45A2FA8123F3A92700F78546 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				45C8D24123F45153001A3D11 /* MovieSummaryTableViewCell.xib */,
+				45C8D24523F45382001A3D11 /* EmptyStateTableViewCell.xib */,
 				45DD0AE823F35A59004FC056 /* MovieSummaryTableViewCell.swift */,
 			);
 			name = Cells;
@@ -162,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				45A2FA8423F3B3C200F78546 /* ViewController.swift */,
+				45C8D24323F451FC001A3D11 /* MainTableViewController.swift */,
 				45DD0AEA23F362CD004FC056 /* MovieSearchResultsTableViewController.swift */,
 				45A2FA7B23F3A75900F78546 /* Database Adapters */,
 				45A2FA7423F396D600F78546 /* User Interface */,
@@ -296,8 +308,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				45C8D24623F45382001A3D11 /* EmptyStateTableViewCell.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				45C8D24223F45153001A3D11 /* MovieSummaryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,11 +397,13 @@
 				45A2FA7623F39C9500F78546 /* UIView.swift in Sources */,
 				45A2FA7A23F3A4A700F78546 /* IMDBAdapter.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				45C8D24823F46247001A3D11 /* CellReuseIdentifier.swift in Sources */,
 				45A2FA7D23F3A77600F78546 /* AbstractMovieDatabase.swift in Sources */,
+				45C8D24423F451FC001A3D11 /* MainTableViewController.swift in Sources */,
 				45DD0AEB23F362CD004FC056 /* MovieSearchResultsTableViewController.swift in Sources */,
 				45DD0AE923F35A59004FC056 /* MovieSummaryTableViewCell.swift in Sources */,
-				45A2FA8523F3B3C200F78546 /* ViewController.swift in Sources */,
 				45A2FA7823F3A26C00F78546 /* TheMovieDatabaseAdapter.swift in Sources */,
+				45C8D24A23F4625A001A3D11 /* CellNib.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
