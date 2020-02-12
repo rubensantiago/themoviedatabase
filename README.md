@@ -1,7 +1,8 @@
 # __The Movie Database__
+By Rubén Santiago
+
 ### __[Complete API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference)__
 ### __[Public API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference/public)__
-By Rubén Santiago
 
 ![Screenshot of Movies app](https://rubensantiago.github.io/themoviedatabase-api-reference/screenshot.png)
 
@@ -39,7 +40,8 @@ You are asked to implement an iOS app that will search for movies through The Mo
 - Be consistent in coding style
 - Write comments where necessary
 - Write unit tests to cover core business logic
-- Not Required
+
+#### Not Required
 - This project is meant to be narrow in scope, you should not implement:
 - Pagination
 - Disk-based cache

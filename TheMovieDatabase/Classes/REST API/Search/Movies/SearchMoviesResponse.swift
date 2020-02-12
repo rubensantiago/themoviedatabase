@@ -9,10 +9,18 @@ import Foundation
 
 // MARK: - SearchMoviesResponse
 internal struct SearchMoviesResponse: Codable {
-    let page: Int?
-    let totalResults: Int?
-    let totalPages: Int?
-    let results: [MovieSearchResultItem]?
+	
+	/// The current page of results
+	let page: Int?
+	
+	/// The total number of movies found
+	let totalResults: Int?
+	
+	/// The number of pages of results
+	let totalPages: Int?
+	
+	/// The results of the movie search query
+	let results: [MovieSearchResultItem]?
 
     enum CodingKeys: String, CodingKey {
         case page = "page"

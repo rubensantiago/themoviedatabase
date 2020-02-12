@@ -7,6 +7,9 @@
 
 import Foundation
 
-internal struct Endpoint {
+/// REST Service endpoints for _themoviedb.org_
+internal struct TheMovieDatabaseEndpoint {
+	
+	/// Endpoint for searching for movies
     static let searchMovie = "search/movie"
 }

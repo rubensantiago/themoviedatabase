@@ -7,17 +7,10 @@
 
 import Foundation
 
-protocol URLQueryParameterStringConvertible {
-    var queryParameters: String {get}
-}
-
-extension Dictionary : URLQueryParameterStringConvertible {
-    /**
-     This computed property returns a query parameters string from the given NSDictionary. For
-     example, if the input is @{@"day":@"Tuesday", @"month":@"January"}, the output
-     string will be @"day=Tuesday&month=January".
-     @return The computed parameters string.
-    */
+extension Dictionary {
+	
+	/// A convenience computed property that allows the easy conversion of a Dictionary into a valid HTTP URI
+	/// query parameters string
     var queryParameters: String {
         var parts: [String] = []
         for (key, value) in self {

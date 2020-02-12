@@ -8,19 +8,22 @@
 import Foundation
 import UIKit
 
-public typealias MovieSearchResultsCompletionHandler = ([MovieSearchResultItem]) -> Void
-
-public typealias ImageDownloadCompletionHandler = (UIImage?) -> Void
-
+/// The main interface for fetching data from _themoviedb.org_
 public class TheMovieDatabase {
 	
+	/// URL factory for _themoviedb.org_ REST services
+	private let urls = TheMovieDatabaseURLFactory()
 	
-	private let urls = URLFactory()
-	
+	/// A cache for movie poster images
 	private let cache = NSCache<NSString, AnyObject>()
 	
+	/// Designated initializer
 	public init() { }
 	
+	/// Searches for movies on _themoviedb.org_ using a given search query
+	/// - Parameters:
+	///   - searchQuery: A search query
+	///   - completion: A completion handler to handle the HTTP response
 	public func searchFor(movieNamed searchQuery: String,
 						  completion: @escaping MovieSearchResultsCompletionHandler) {
 		
@@ -43,6 +46,12 @@ public class TheMovieDatabase {
 // MARK - Images
 public extension TheMovieDatabase {
 	
+	/// Retrieves a movie poster from the cache. If it does not exist in the cache, it will download it from the _themoviedb.org_
+	/// - Parameters:
+	///   - path: the filepath where the image can be found
+	///   - size: The requested size of the poster to be returned
+	///   - quality: The image quality of the poster that is returned
+	///   - completion: A closure to handle the movie poster
 	func getImage(atPath path: String,
 				  size: CGSize = CGSize(width: 600, height: 900),
 				  quality: ImageQuality = .best,

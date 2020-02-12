@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// Levels of image quality
 public enum ImageQuality: String {
+	
+	/// The best image quality available
     case best = "bestv2"
 }
