@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - SearchMoviesResponse
-struct SearchMoviesResponse: Codable {
+internal struct SearchMoviesResponse: Codable {
     let page: Int
     let totalResults: Int
     let totalPages: Int

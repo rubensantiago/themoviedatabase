@@ -7,21 +7,21 @@
 
 import Foundation
 
-struct MovieSearchResultItem: Codable {
+public struct MovieSearchResultItem: Codable {
     let popularity: Double
     let voteCount: Int
     let video: Bool
-    let posterPath: String?
-    let id: Int
+    public let posterPath: String?
+    public let id: Int
     let adult: Bool
     let backdropPath: String?
     let originalLanguage: OriginalLanguage
-    let originalTitle: String
+    public let originalTitle: String
     let genreIDS: [Int]
     let title: String
     let voteAverage: Double
-    let overview: String
-    let releaseDate: String
+    public let overview: String
+    public let releaseDate: String
 
     enum CodingKeys: String, CodingKey {
         case popularity = "popularity"

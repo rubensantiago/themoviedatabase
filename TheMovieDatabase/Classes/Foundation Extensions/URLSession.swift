@@ -25,6 +25,11 @@ extension URLSession {
                                   completionHandler: @escaping (SearchMoviesResponse?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return self.codableTask(with: url, completionHandler: completionHandler)
     }
+	
+	func getMoviePosterTask(with url: URL,
+								  completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+		return self.dataTask(with: url, completionHandler: completionHandler)
+	}
 }
 
 // MARK: - Helper functions for creating encoders and decoders
