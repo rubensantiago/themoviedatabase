@@ -21,5 +21,4 @@ extension Dictionary {
         }
         return parts.joined(separator: "&")
     }
-    
 }

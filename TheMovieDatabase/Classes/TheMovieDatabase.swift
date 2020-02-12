@@ -15,10 +15,16 @@ public class TheMovieDatabase {
 	private let urls = TheMovieDatabaseURLFactory()
 	
 	/// A cache for movie poster images
-	private let cache = NSCache<NSString, AnyObject>()
+	private let cache: NSCache<NSString, AnyObject>?
 	
 	/// Designated initializer
-	public init() { }
+	public init(with cache: NSCache<NSString, AnyObject>? = nil) {
+		if let cache = cache {
+			self.cache = cache
+		} else {
+			self.cache = NSCache<NSString, AnyObject>()
+		}
+	}
 	
 	/// Searches for movies on _themoviedb.org_ using a given search query
 	/// - Parameters:
@@ -66,7 +72,7 @@ public extension TheMovieDatabase {
 					return
 			}
 			
-			guard let cachedMoviePosterImage = self.cache.object(forKey: path as NSString)
+			guard let cachedMoviePosterImage = self.cache?.object(forKey: path as NSString)
 				else {
 					
 					let task = URLSession.shared.getMoviePosterTask(with: imageURL) { (data, response, error) in
@@ -74,7 +80,7 @@ public extension TheMovieDatabase {
 						if let data = data,
 							let downloadedMoviePosterImage = UIImage(data: data) {
 							
-							self.cache.setObject(downloadedMoviePosterImage, forKey: path as NSString)
+							self.cache?.setObject(downloadedMoviePosterImage, forKey: path as NSString)
 							completion(downloadedMoviePosterImage)
 						}
 					}

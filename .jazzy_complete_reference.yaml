@@ -16,6 +16,7 @@ build_tool_arguments:
     - -sdk
     - iphonesimulator
 theme: apple
+skip_undocumented: true
 head: "<style>
 header {
 	background-color: #135aad;

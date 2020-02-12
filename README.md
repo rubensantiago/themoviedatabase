@@ -1,26 +1,48 @@
 # __The Movie Database__
 By Rubén Santiago
 
+![Screenshot of Movies.app](https://rubensantiago.github.io/themoviedatabase-api-reference/screenshot.png)
+
+### Implementation Details
+- The MovieDB API is encapsulated in a framework I created called `TheMovieDatabase`
+    - i.e. encapsulates the "core business logic"
+    - Has 100% unit test code coverage
+- The Movies app target builds and embeds `TheMovieDatabase` dependency when building the app
+- In Movies app has a protocol named `AbstractMovieDatabase` allows for 
+    - Future expansion of support for other movie databases with minimal effort to adopt client-side (Movies.app)
+    - Insulation from change in framework vendor
+- Skeleton entities appear in the source code for IMDb but are not implemented
+
+Public and Complete API Reference Documentation can be found in the `/docs` directory, or... 
 ### __[Complete API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference)__
 ### __[Public API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference/public)__
 
-![Screenshot of Movies app](https://rubensantiago.github.io/themoviedatabase-api-reference/screenshot.png)
+### Given More Time, I Would Implement:
+- `os.log` support
+- More robust error handling for HTTP Response decoding
+- More detailed test failure messages
+- Add support for other movie databases
+- A more unique UI
+- Fix known issues listed below
+
+Known Issues
+- Small performance lag when typing quickly
 
 ## iOS Code Challenge: Movie Search
 ### Requirements
 You are asked to implement an iOS app that will search for movies through The Movie Database (TMDb). The app will allow us to type in a keyword and then visualize all the movies matching that keyword. For each movie returned, the app will display its title, poster, and overview (short summary of the plot).
 
-- Use the “Search” API provided by https://www.themoviedb.org/documentation/api
-- Make a GET request to https://api.themoviedb.org/3/search/movie with the following parameters:
-    - api_key: for convenience, use 2a61185ef6a27f400fd92820ad9e8537
-    - query: a string representing the keyword we are searching for
-- Make a GET request to https://image.tmdb.org/t/p/w600_and_h900_bestv2/{poster} to download the poster image for the movie, where {poster} is the value returned by the previous endpoint within the poster_path field.
+- Use the “Search” API provided by `https://www.themoviedb.org/documentation/api`
+- Make a `GET` request to `https://api.themoviedb.org/3/search/movie` with the following parameters:
+    - `api_key`: for convenience, use `2a61185ef6a27f400fd92820ad9e8537`
+    - `query`: a string representing the keyword we are searching for
+- Make a `GET` request to `https://image.tmdb.org/t/p/w600_and_h900_bestv2/{poster}` to download the poster image for the movie, where {poster} is the value returned by the previous endpoint within the poster_path field.
 
 #### Sample Requests
 - Searching for “Harry Potter”: 
-    - https://api.themoviedb.org/3/search/movie?api_key=2a61185ef6a27f400fd92820ad9e8537&query=Harry%20Potter
+    - `https://api.themoviedb.org/3/search/movie?api_key=2a61185ef6a27f400fd92820ad9e8537&query=Harry%20Potter`
 - Harry Potter and the Philosopher’s Stone poster: 
-    - https://image.tmdb.org/t/p/w600_and_h900_bestv2/lR4drT4VGfts32j9jYTZUc1a3Pa.jpg
+    - `https://image.tmdb.org/t/p/w600_and_h900_bestv2/lR4drT4VGfts32j9jYTZUc1a3Pa.jpg`
 
 #### Hard Requirements
 - The code needs to compile and run in the simulator
