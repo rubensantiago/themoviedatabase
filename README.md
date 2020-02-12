@@ -3,7 +3,7 @@ By Rubén Santiago
 
 ![Screenshot of Movies.app](https://rubensantiago.github.io/themoviedatabase-api-reference/screenshot.png)
 
-### Implementation Details
+## Implementation Details
 - The MovieDB API is encapsulated in a framework I created called `TheMovieDatabase`
     - i.e. encapsulates the "core business logic"
     - Has 100% unit test code coverage
@@ -13,7 +13,7 @@ By Rubén Santiago
     - Insulation from change in framework vendor
 - Skeleton entities appear in the source code for IMDb but are not implemented
 
-Public and Complete API Reference Documentation can be found in the `/docs` directory, or... 
+Public and Complete API Reference Documentation can be found in `/docs/index.html`, or... 
 ### __[Complete API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference)__
 ### __[Public API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference/public)__
 
