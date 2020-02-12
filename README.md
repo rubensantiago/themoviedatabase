@@ -1,5 +1,6 @@
 # __The Movie Database__
-### Complete Framework API Reference
+### [Complete API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference)
+### [Public API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference/public)
 By Rubén Santiago
 
 ![Screenshot of Movies app](https://rubensantiago.github.io/themoviedatabase-api-reference/screenshot.png)
