@@ -21,7 +21,7 @@ header {
 	background-color: #135aad;
 }
 header p {
-	color: #b9b9b9;
+	color: white;
 }
 .sidebar {
 	width: 249px;
