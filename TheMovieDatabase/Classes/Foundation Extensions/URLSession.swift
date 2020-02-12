@@ -16,8 +16,12 @@ extension URLSession {
                 completionHandler(nil, response, error)
                 return
             }
+			do {
+				completionHandler(try self.newJSONDecoder().decode(T.self, from: data), response, nil)
+			} catch {
+				print(error)
+			}
             
-            completionHandler(try? self.newJSONDecoder().decode(T.self, from: data), response, nil)
         }
     }
 

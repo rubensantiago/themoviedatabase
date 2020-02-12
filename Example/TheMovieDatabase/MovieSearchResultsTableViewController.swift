@@ -9,11 +9,13 @@
 import UIKit
 import TheMovieDatabase
 
-class MovieSearchResultsTableViewController: UITableViewController, UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+class MovieSearchResultsTableViewController: UITableViewController, UISearchControllerDelegate, UISearchBarDelegate {
 	
 	fileprivate let db: AbstractMovieDatabase = TheMovieDatabaseAdapter()
+	
 	fileprivate var movieDB: TheMovieDatabaseAdapter
-	private var searchController: UISearchController?
+	
+	weak var searchController: UISearchController?
 	
 	var movies: [AnyHashable: MovieSearchResultItem] = [:] {
 		didSet {
@@ -29,21 +31,6 @@ class MovieSearchResultsTableViewController: UITableViewController, UISearchCont
 	required init?(coder: NSCoder) {
 		movieDB = db as! TheMovieDatabaseAdapter
 		super.init(coder: coder)
-	}
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		searchController = UISearchController(searchResultsController: self)
-		searchController?.delegate = self
-		searchController?.searchResultsUpdater = self
-		searchController?.searchBar.delegate = self
-		navigationItem.searchController = searchController
-		searchController?.dimsBackgroundDuringPresentation = false
-		navigationItem.hidesSearchBarWhenScrolling = false
-
-		self.definesPresentationContext = true
-		
 	}
 	
 	// MARK: - Table view data source
@@ -73,14 +60,8 @@ class MovieSearchResultsTableViewController: UITableViewController, UISearchCont
 		
 		return cell
 	}
-	
-	func updateSearchResults(for searchController: UISearchController) {
 		
-	}
-	
 	func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-		print(searchText)
-		
 		if searchText.count > 2 {
 			movieDB.searchFor(movieNamed: searchText) { (searchResults) in
 				self.movies = searchResults
@@ -89,14 +70,12 @@ class MovieSearchResultsTableViewController: UITableViewController, UISearchCont
 	}
 	
 	func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-		print("did end")
 		movieDB.searchFor(movieNamed: searchBar.text ?? "") { (searchResults) in
 			self.movies = searchResults
 			DispatchQueue.main.async {
 				self.searchController?.dismiss(animated: true, completion: nil)
 			}
 		}
-		
 	}
 }
 

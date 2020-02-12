@@ -29,7 +29,7 @@ public class TheMovieDatabase {
 				
 				var moviesFound: [AnyHashable: MovieSearchResultItem] = [:]
 				
-				searchMoviesResponse?.results.forEach({ (item) in
+				searchMoviesResponse?.results?.forEach({ (item) in
 					moviesFound[item.id] = item
 				})
 				

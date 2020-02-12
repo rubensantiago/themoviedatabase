@@ -8,20 +8,20 @@
 import Foundation
 
 public struct MovieSearchResultItem: Codable {
-    let popularity: Double
+	public let originalTitle: String
+	public let overview: String
+	public let releaseDate: String?
+	public let posterPath: String?
+	public let id: Int
+	let popularity: Double
     let voteCount: Int
     let video: Bool
-    public let posterPath: String?
-    public let id: Int
     let adult: Bool
     let backdropPath: String?
-    let originalLanguage: OriginalLanguage
-    public let originalTitle: String
+    let originalLanguage: String
     let genreIDS: [Int]
     let title: String
     let voteAverage: Double
-    public let overview: String
-    public let releaseDate: String
 
     enum CodingKeys: String, CodingKey {
         case popularity = "popularity"
