@@ -8,7 +8,7 @@ By Rubén Santiago
     - i.e. encapsulates the "core business logic"
     - Has 100% unit test code coverage
 - The Movies app target builds and embeds `TheMovieDatabase` dependency when building the app
-- In Movies app has a protocol named `AbstractMovieDatabase` allows for 
+- The Movies app has a protocol named `AbstractMovieDatabase` allows for 
     - Future expansion of support for other movie databases with minimal effort to adopt client-side (Movies.app)
     - Insulation from change in framework vendor
 - Skeleton entities appear in the source code for IMDb but are not implemented
