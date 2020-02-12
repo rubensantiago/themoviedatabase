@@ -17,7 +17,7 @@ Public and Complete API Reference Documentation can be found in `/docs/index.htm
 ### __[Complete API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference)__
 ### __[Public API Reference ➡️](https://rubensantiago.github.io/themoviedatabase-api-reference/public)__
 
-### Given More Time, I Would Implement:
+## Given More Time, I Would Implement...
 - `os.log` support
 - More robust error handling for HTTP Response decoding
 - More detailed test failure messages
@@ -25,7 +25,7 @@ Public and Complete API Reference Documentation can be found in `/docs/index.htm
 - A more unique UI
 - Fix known issues listed below
 
-Known Issues
+#### Known Issues
 - Small performance lag when typing quickly
 
 ## iOS Code Challenge: Movie Search
